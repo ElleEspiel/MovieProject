@@ -15,7 +15,7 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Optional<Movie> singleMovie(ObjectId id){ //Optional condition is to let the method accept null response
-        return movieRepository.findById(id);
+    public Optional<Movie> singleMovie(String imdbId){ //Optional condition is to let the method accept null response
+        return movieRepository.findMovieByImdbId(imdbId);
     }
 }
